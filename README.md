@@ -1,6 +1,6 @@
 ### Gemail-Hack
 
-### python script for Hack gmail account brute force 
+### A python script to brute-force-hack a gmail acoount. 
 
 ###  What is brute force attack?
 ### In brute force attack,script or program try the each and every combination of password probability 
